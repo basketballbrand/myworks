@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./swimming.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back relactive">
+            <h2 class="absolute" data-in-effect="fadeInRightBig">
+                  Yilan Event<br>
+                  Swimming Pool
+            </h2>
+            <img src="./images/swimming/資產 6.png" alt="">
+
+            <div class="back_02 absolute">
+                <img src="./images/swimming/資產 2.png" alt="">
+            </div>
+
+            <div class="back_01 absolute">
+                <img src="./images/swimming/資產 12.png" alt="">
+
+                <div class="back_03 absolute">
+                    <img src="./images/swimming/資產 3.png" alt="">
+                </div>
+
+                <div class="back_04 absolute">
+                    <img src="./images/swimming/資產 4.png" alt="">
+                </div>
+                <div class="back_05 absolute">
+                    <img src="./images/swimming/資產 5.png" alt="">
+                </div>
+
+            </div>
+        </div>
+        <div class="back_second">
+
+        </div>
+    </div>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <!-- Textillate.js v0.4.0 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+<script>
+    var title = $(".back h2");
+    title.textillate();
+    title.on('click',function(){
+        // console.log("123");
+        $(".back_04").animate({margin:"50px"},12000);
+        $(".back_03").animate({margin:"-20px"},12000);
+        $(".back_05").animate({top:"100px"},15000);
+    })
+</script>
+</body>
+</html>

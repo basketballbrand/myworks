@@ -1,0 +1,57 @@
+.relactive{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.container{
+    width: 100vw;
+    margin: 0 auto;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+.back{
+    width: 100%;
+}
+.back img{
+    width: 100%;
+    object-fit:cover;
+}
+.back_01{
+    width: 76%;
+    top: 52%;
+    left: 0%;
+}
+.back_01 img, .back_02 img, .back_03 img, .back_04 img, .back_05 img{
+    width:100% ;
+    object-fit: cover;
+}
+.back_02{
+    width: 16%;
+    top: 6%;
+    left: 20%;
+}
+.back_03{
+    width: 26%;
+    top: 17%;
+    left: 38%;
+}
+.back_04{
+    width: 16%;
+    top: 18%;
+    left: 13%;
+}
+.back_05{
+    width: 20%;
+    top: 42%;
+    left: 0%;
+}
+.back h2{
+    top: -3%;
+    /* right: -33%; */
+    font-size: 61px;
+    color: aliceblue;
+    text-align: right;
+    letter-spacing: 30px;
+    line-height: 110%;
+    cursor: pointer;
+}
