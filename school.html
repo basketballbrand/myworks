@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>School</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background:url(images/enOHm5i.jpg) 0 0 repeat;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        /*-----------nav------------ */
+    .header{
+        background: #fff;
+        width: 100%;
+        height: 40px;
+        position: fixed;
+        z-index: 1;
+    }
+    .wrapper{
+        max-width: 960px;
+        margin:0 auto;
+        display: flex;
+        justify-content: space-around;
+        }
+    .wrapper img{
+        width: 100%;
+        height: 36px;
+        vertical-align: middle;
+        
+    }
+    .wrapper-menu{ 
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+    }
+    .rwd_header{
+        display: flex;
+    }
+   .wrapper-menu a{
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 10px;
+        color: #666;
+        }
+    .fb{
+        padding: 5px 10px 2px 6px;
+        line-height: 26px;
+      }
+    .fb1{
+        background: #5d82d0;
+        border-radius: 5px;
+    }
+    .fab, .fb1 a{
+        color: #fff;
+        padding: 0 5px;
+    }
+    .fab{
+        margin-right: 2px;
+    }
+    .fa-bars{
+        font-size: 20px;
+    }
+    .rwd02{
+        opacity: 0;
+    }
+    .bars:hover .fa-bars{
+        color: #fff;
+    }
+    .bars:hover{
+        color: #fff;
+        background: rgb(235, 109, 109);
+    }
+    /* .bars:active .side_bar{
+        opacity: 1;
+        z-index: 11;
+    } */
+    .side_bar{
+        position: absolute;
+        width: 240px;
+        background: rgba(255,255,255,1);
+        top:40px;
+        right: -240px;
+        opacity: 0;
+    }
+    .side_bar ul{
+        list-style: none;
+    }
+    /*-----------header menu------------ */
+    .header-menu{
+        padding-top: 40px;
+        max-width: 100%;
+        height: 250px;
+        background:#18b8c7;
+        }
+    .header-menu .left img{
+        height: 40px;
+    }
+    .header-menu .content{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .header-menu .bottom{
+       text-align: center;
+    }
+    .header-menu .bottom a{
+        text-decoration: none;
+        padding: 10px 20px;
+        background:transparent;
+        border-radius: 20px;
+        color: #000;
+        margin: 20px;
+    }
+    .bottom01{
+        width: 100%;
+        height: 10px;
+        background: url(images/header_l.jpg)0 0 repeat-x;
+    }
+    .bottom a:hover{
+        background:#fff000;
+    }
+   
+    /*-----------container------------ */
+    .container{
+        max-width: 100%;
+        padding: 0 30px;
+    }
+    .cont{
+        max-width: 960px;
+        margin: 0 auto;
+        min-height: 400px;
+    }
+    .top{
+        max-width: 960px;
+        margin: 0 auto;
+        position: relative; 
+        display: flex;
+        justify-content:center;
+        align-content: center;  
+    }
+    .rwd03{
+        margin-top: 60px;
+    }
+    .rwd04{
+        opacity: 0;
+        position: absolute;
+        }
+
+    .top01{
+        text-align: center;
+        background: url(images/hat.png) 100px 100px no-repeat;
+        color:#525252;
+        font-size: 17px;
+        padding:20px;
+        line-height: 30px;
+    }
+    .time{
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border: 1px solid #1f8597;
+        border-radius: 20px;
+        position: relative;
+        padding: 10px 20px;
+        margin:0  0  60px 0;
+    }
+    .circle{
+        background: #1f8597;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+    .one{
+        bottom:100px;
+        left: -50px;
+    }
+    .circle p{
+        font-size: 22px;
+        color: #fff;
+        line-height: 25px;
+    }
+    .time ul{
+        list-style: none;
+    }
+    .time ul li strong{
+        color: #1f8597
+    }
+    .time ul li{
+        font-size:16px;
+        color: #666;
+        line-height: 30px;
+    }
+    .time img{
+        position: absolute;
+        top:-200px;
+        right: 50px;
+    }
+    
+    .rule{
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border: 1px solid #1f8597;
+        border-radius: 20px;
+        position: relative;
+        padding: 10px 20px;
+        margin-bottom: 50px;
+    }
+    .rule ul{
+        list-style: none;
+    }
+    .rule ul li{
+        text-decoration: none;
+        font-size:16px;
+        color: #666;
+        margin: 20px;
+    }
+    .rule ul li a{
+        text-decoration: none;
+    }
+    .rule ul li strong{
+        color: #000;
+    }
+    .two{
+        bottom:450px;
+        left: -50px;
+    }
+    .three{
+        position: absolute;
+        left:-50px;
+    }
+    .rwd_06{
+        max-width: 100%;
+        margin-left:100px;
+        opacity: 1;
+    }
+    .rwd_07{
+        position: absolute;
+        left: 100%;
+        opacity: 0;
+
+    }
+    .note{
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border: 1px solid #1f8597;
+        border-radius: 20px;
+        position: relative;
+        padding: 20px 50px 20px 20px;
+        line-height: 20px;
+        margin-bottom: 50px;
+    }
+    .four{
+        left: -50px;
+        top:-40px;
+    }
+    .note ul{
+        list-style: none;
+    }
+    .note ul li{
+        margin: 10px 0;
+    }
+
+    .action{
+        font-size: 14px;
+        color: rgb(7, 112, 4);
+    }
+
+    /*-----------footer------------ */
+    .footer{
+        max-width: 100%;
+        background: #000;
+    }
+    .cir{
+        color:#b3b3b3;
+        background:#5e5e5e;
+        font-size:18px;
+        padding: 1px 0;
+    }
+    .all{
+        text-align: center;
+    }
+    .flex li{
+        list-style: none;
+    }
+    .footerimg{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }   
+    .footerimg img{
+        padding-bottom: 20px;
+        width: 50%;
+    }
+    .frist, .second{
+        background:#5e5e5e;
+        border-bottom: 1px solid #000;
+    }
+    .last{
+        width: 100%;
+        background: #000;
+        text-align: center;
+        color: #b3b3b3;
+        padding: 5px 0 5px 0;
+        border-top: 1px solid #b3b3b3;
+        font-size: 12px;
+    }
+    @media screen and (max-width:768px){
+        .rwd01{
+            opacity: 0;
+        }
+        .wrapper{
+            position: relative;
+        }
+        .rwd02{
+            opacity: 1;
+            position: absolute;
+            top:0;
+            left:-220px;
+        }
+        .rwd_header{
+            display: none;
+        }
+        .content{
+            margin-top: 50px;
+        }
+        .bottom{
+            display: none;
+        }
+        .rwd03{
+            opacity: 0;
+            margin-top:0;
+        }
+        .rwd04{
+            opacity: 1;
+        }
+        .top01{
+            background: transparent;
+            margin-top: 50px;
+        }
+        .rwd_05{
+            display: none;
+        }
+        .time{
+            margin-top: 40px;
+            padding: 20px 0 ;
+            margin-bottom: 100px;
+        }
+        .one{
+            top:-30%;
+            left: 40%;
+        }
+        .rule{
+            margin-top: 40px;
+            padding: 30px 20px 10px 0px;
+            margin-bottom: 100px;
+        }
+        .two{
+            top:-6%;
+            left: 40%;
+            }
+        .three{
+            display: none;
+        }
+        .four{
+            top:-5%;
+            left:40%;
+        }
+        .note{
+            padding-top:30px;
+        }
+        .rwd_06{
+        display: none;
+        }
+        .rule_rwd{
+            margin-left: 17%;
+            max-width: 100%;
+            min-height: 750px;
+            background: url(images/hzxUrFo.jpg)0 0 no-repeat;
+            background-size:contain;
+        }
+    }
+
+    @media screen and (min-width:768px){
+        .footer{
+        max-width: 100%;
+        background: #000;
+        height: auto;
+        padding: 10px 20px;
+        }
+        .cir{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        .frist, .second {
+        background:#000;
+        border-bottom: 1px solid transparent;
+        }
+        .all{
+            max-width: 100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex{
+            display: flex;
+        }
+        .flex li{
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="header nav">
+        <div class="wrapper">
+        <a href=""><img class="rwd01" src="images/logo.svg" alt=""></a>
+        <a href=""><img  class="rwd02" src="images/logo_m.svg" alt=""></a>
+        <div class="wrapper-menu">
+            <div class="rwd_header">
+                <a href="">學校</a>
+                <a href="">貼圖</a>
+                <a href="">ACG</a>
+                <a href="">女孩</a>
+                <a href="">2018 制服大賞</a>
+                <a href="">活動</a>
+                <a href="">頻道</a>
+                <a href="">網誌</a>
+                <a href=""><i class="fas fa-search"></i></a>
+            </div>
+        <div class="fb">
+        <div class="fb1">
+        <a><i class="fab fa-facebook"></i>登入</a>
+        </div>
+        </div>
+        <div class="bars">
+        <a href=""><i class="fas fa-bars"></i></a>
+        </div>
+        <div class="side_bar">
+            <ul>
+                <li><a href=""></a>搜尋</li>
+                <li><a href=""></a>學校</li>
+                <li><a href=""></a>貼圖</li>
+                <li><a href=""></a>ACG</li>
+                <li><a href=""></a>女孩</li>
+                <li><a href=""></a>小舖</li>
+                <li><a href=""></a>班服訂製</li>
+                <li><a href=""></a>台灣高校制服大賞</li>
+                <li><a href=""></a>活動</li>
+                <li><a href=""></a>頻道</li>
+                <li><a href=""></a>酷瞧影音</li>
+                <li><a href=""></a>網誌</li>
+                <li><a href=""></a>名家</li>
+                <li><a href=""></a>最新消息</li>
+                <li><a href=""></a>網站狀態</li>
+                <li><a href=""></a>網站地圖</li>
+            </ul>    
+        </div>
+        </div>
+        </div>
+    </div>
+    <div class="header-menu">
+       <div class="left">
+            <img src="images/WWjkt80.png" alt="">
+       </div> 
+       <div class="content">
+           <a href=""><img src="images/0AeuxJ2.png" alt=""></a>
+       </div>
+    
+       <div class="bottom">
+           <a  href="">活動辦法</a>
+           <a href="">全台海選</a>
+           <a href="">TOP12決賽</a>
+           <a href="">制服辣秘辛</a>
+           <a href="">結果</a>
+       </div>
+    </div>
+    <div class="bottom01">
+    </div>
+
+
+    <div class="container">
+        <div class="cont">
+        <div class="top">
+            <img class="rwd03" src="images/pITFdoE.png" alt="">
+            <img class="rwd04" src="images/p8Vlugc.png" alt="">
+        </div>
+        <div class="top01">
+         <p>
+            專屬高校生的青春印記<br>
+            第三屆畢業季高校制服大賞熱血開跑！<br>
+            網羅全台逾500所高中校園制服進行強烈的廝殺票選<br>
+            究竟是純潔無敵白襯衫<br>
+            萬年不敗的水手服<br>
+            還是充滿萌味的連身款能奪下最終勝利呢? <br>
+            在即將來臨的畢業季，為自己的學校制服再添一筆輝煌記事吧！<br>
+            今年，2016的制服大賞，你投哪一家！<br>
+         </p>
+        </div>
+        <div class="time">
+        <div class="circle one">
+            <p>
+                活動<br>
+                時間
+            </p>
+        </div>
+        <ul>
+            <li><strong>第一階段－全台海選：</strong>2016/04/11－04/29，23:59止</li>
+            <li><strong>第二階段－TOP12決賽(最佳人氣/最萌女校服/最鮮男校服)：</strong>2016/05/09－05/27，23:59止</li>
+            <li><strong>得獎公佈：</strong>016/06/08 公布於同網頁，敬請密切注意！</li>
+        </ul>
+        <img class="rwd_05" src="images/03MWD8L.png" alt="">
+    </div>
+
+
+        <div class="rule">
+            <div class="circle two">
+            <p>
+                賽程<br>
+                說明
+            </p>
+        </div>
+        <ul>
+            <li><a href=""><strong>第一階段－全台海選：</strong></a>請進入制服地圖活動頁面，登入FB帳號即可投票，每日每帳號可投20票，同項目不可重複投票。</li>
+            <li><a href=""><strong>第二階段－TOP12決賽(最佳人氣/最萌女校服/最鮮男校服)：</strong></a>請進入 SETN.com 三立新聞網活動頁面，登入FB帳號即可投票，每小時每帳號可投6票，同項目不可重複投票。</li>
+        </ul>
+        <div class="rule_rwd"></div>  
+        <img class="three" src="images/qVdEmgm.png" alt="">
+        <img class="rwd_06" src="images/9oBzclz.jpg" alt="">
+        </div>
+
+
+        <div class="note">
+            <div class="circle four">
+                 <p>
+                    注意<br>
+                    事項
+                </p>    
+            </div>
+            <ul>
+                <li>01. 參賽者及參與投票網友所提供之個人資料，僅作為抽獎、寄發中獎通知及主辦單位寄發相關資訊使用。每人僅限一次中獎的機會，如發現重複中獎之情況或冒用他人姓名參加活動，將取消重複中獎資格。</li>
+                <li>02. 得獎將公布於活動網頁，中獎者將以Facebook登錄的Email進行mail通知，若在期限內未回覆正確聯絡資料者，視同放棄中獎資格。</li>
+                <li>03. 請確認您的得獎回傳通知所填寫的聯絡及地址資料，所有資料皆會保密，只作為獎品寄送依據。逾時未修改正確寄送地址、或因資料填寫不完整或不正確導致無法通知中獎時，將視為放棄領獎資格，獎項不另行補發。</li>
+                <li>04. 如有任何因電腦、網路、電話、技術或不可歸責於主辦單位之事由，而使寄予得獎人之獎品有遲延、遺失、錯誤、無法辨識或毀損之情況，主辦單 位不負任何法律責任，參加者亦不得因此異議。</li>
+                <li>05. 活動之獎品以寄送的實物為準，獎品不得轉換、轉讓或折換現金。得獎者應依政府規定，獎品價值超過NT$20,000以上，依國稅局規定需繳交10%稅金。</li>
+                <li>06. 本活動為公開良性競賽性質，參賽者不得有舞弊、或惡意攻擊訐等情事。如有以下行為主辦單位有權取消參加資格，並保留相關法律追訴權利：使用不當行為或程式灌票或干擾活動進行、傳播不實謠言，造成本活動或本公司名譽受損、違反本活動辦法及政府法令之行為等。</li>
+                <li>07. 本活動主辦單位，對本活動網站有絕對的管理權，並就參賽者或投票者之資格及票數有審查之權利；若經審認資格不符或票數有不當、不妥情事者，本活動主辦單位有權取消得獎資格或逕行刪除參賽票數且不予事先告知。</li>
+                <li>08. 活動辦法載明於本活動網頁中，參加者於參加本活動之同時，即視為同意並遵守本活動相關規範及注意事項。如本活動因不可抗力之特殊原因無法執行時，主辦單位有權決定取消、終止、修改或暫停本活動。主辦單位亦保有修正、暫停或終止本活動之權利，恕不另行通知。</li>
+                <li>09. 此活動所使用之軟體或程式及網站上所有內容，均由主辦單位擁有其智慧財產權，任何人不得逕自使用、修改、重製、公開播送、改作、散布、發行、公開發表、進行還原工程、解編或反向組譯。若欲引用其內容，必須依法取得本活動主辦單位之正式書面授權。</li>
+                <p class="action">※本活動並非由Facebook平台贊助、管理及開發，本活動乃由 SETN.com 三立新聞網/制服地圖主辦，並透過此活動網頁所提供的活動管理服務來舉辦、管理本活動，您在本活動所做的行為，與所提供的資料僅提供予主辦單位管理本活動使用。</p>
+            </ul>
+    </div>
+</div>
+</div>
+
+
+<div class="footer">
+    <div class="all">
+        <div class="frist flex">
+            <div class="cir">
+                    <P>主辦單位</P>
+            </div>
+            <div class="footerimg">
+            <li class="allright"><a href=""><img src="images/f_setn.png" alt=""></a></li>
+            <li><a href=""><img src="images/f_um.png" alt=""></a></li>
+        </div>
+        </div>
+    
+
+    <div class="second flex">
+            <div class="cir">
+                    <P>協辦單位</P>
+                </div>
+                <div class="footerimg">
+                <li class="allright"><a href=""><img src="images/f_st.png" alt=""></a></li>
+                <li><a href=""><img src="images/f_hairdodo.png" alt=""></a></li>
+            </div>
+    </div>
+
+    <div class="third flex">
+            <div class="cir">
+                    <P>特別感謝</P>
+            </div>
+            <div class="footerimg">
+            <li><a href=""><img src="images/f_swanky.png" alt=""></a></li>
+            <li><a href=""><img src="images/f_ga.png" alt=""></a></li>
+            <li> <a href=""><img src="images/th.png" alt=""></a></li>
+            <li><a href=""><img src="images/f_tesa.png" alt=""></a></li>
+            <li><a href=""><img src="images/f_om.png" alt=""></a></li>
+            <li><a href=""><img src="images/3KzV6Ae.png" alt=""></a></li>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="last">
+    <P>© 2016 Sanlih E-Television</P>
+</div>
+</body>
+</html>
