@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Menu</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Quicksand" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #000;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .transition {
+            transition: 0.5s;
+        }
+
+        /* ----------title----------- */
+        .title {
+            max-width: 100%;
+        }
+
+        .title>nav>ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .title>nav>ul>li {
+            margin: 20px;
+            font-size: 20px;
+        }
+
+        .menubar {
+            margin-right: 30px;
+        }
+
+        .menubar a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 5px;
+        }
+        .fa-bars{
+            color: rgb(245, 229,7);
+            font-size: 30px;
+
+        }
+        .bar{
+            max-height: 0;
+        }
+        .bar ul{
+            padding: 0;
+            margin: 0;
+            transition: 0.5s;
+            list-style: none;
+            top: 30px;
+            right: 0px;
+            opacity: 0;
+            z-index: 100;
+        }
+        
+        .bar ul li{
+            padding: 10px 20px;
+            text-align: center;
+            color: #000;
+            border: 1px solid #fff;
+            background: rgb(245, 229,7);
+            margin: 3px 0;
+        }
+        .bar ul li a{
+            color: #000;
+        }
+        .fa-times-circle{
+            font-size: 30px;
+        }
+        .bar li:hover{
+            display: block;
+            transform: scale(1.1,1.1);
+        }
+        .bar01{
+            display: none;
+        }
+
+        /* ----------maintop----------- */
+
+        .main {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .mainmenu {
+            margin: 0 auto;
+            /* max-width: 20%; */
+            text-align: center;
+            font-size: 32px;
+            color: rgb(245, 229, 7);
+            /* border-bottom: 1px solid #fff; */
+            letter-spacing: 10px;
+            padding: 0 0 0 10px;
+            cursor: default;
+            /* padding-bottom: 10px; */
+        }
+
+        .menu_img {
+            max-width: 960px;
+            margin: 20px 0 50px 0;
+            /* border: 1px solid #fff; */
+        }
+
+        .menu_img ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+        .menu_img ul li {
+            max-width: 25%;
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .menu_img ul li img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* ----------mainwaterfall----------- */
+        .waterfall {
+            max-width: 960px;
+            margin: 0 auto;
+            column-count: 4;
+            /* 欄數 */
+            column-gap: 25px;
+            /* 每欄間隔 */
+            /* border: 1px solid #fff; */
+
+            padding: 20px 30px;
+        }
+
+        .item {
+            max-width: 100%;
+            margin: 0 0 30px 0;
+            border-radius: 10px;
+            /* overflow: hidden; */
+            border: 3px solid #fff;
+            break-inside: avoid;
+            /* 瀑布流照片爆板時下此指令 不會爆板 */
+            transition: 0.5s;
+        }
+
+        .item img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            filter: opacity(70%);
+
+        }
+
+        .mainwater {
+            margin-bottom: 20px;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .item:hover img {
+            filter: none;
+        }
+        .footerbig {
+            top: 30px;
+            max-width: 100%;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .footer {
+            bottom: 20px;
+            margin-top: 50px;
+            width: 100%;
+            height: 100px;
+            background: url(images/wave.svg) 0 0 repeat;
+            position: fixed;
+
+        }
+
+        .footer1 {
+            bottom: 0;
+            left: 4%;
+            margin-top: 30px;
+            width: 100%;
+            height: 100px;
+            background: url(images/wave.svg) 0 0 repeat;
+            position: fixed;
+        }
+        .goTop {
+            background: rgb(245, 229, 7);
+            position: fixed;
+            right: 80px;
+            bottom: 150px;
+        }
+        .goTop:hover{
+            transform: scale(1.5,1.5);
+        }
+
+
+        @media screen and (max-width:768px) {
+
+            .about,
+            .menu,
+            .contact {
+                display: none;
+            }
+
+            .fa-bars {
+                font-size: 30px;
+            }
+
+            .menubar {
+                margin: 0;
+            }
+            .footer{
+            bottom: 13px;
+            width: 100%;
+            height: 70px;
+        }
+        .footer1{
+            width: 100%;
+            height: 70px;
+            left:7%;
+        }
+        .menu_img ul li{
+            max-width: 40%;
+        }
+        .waterfall{
+            column-count: 3;
+            /* 欄數 */
+            column-gap: 10px;
+        }
+        .bar01, .backed{
+            display: block;
+            cursor: pointer; 
+        }
+        .bar.active ul{
+            opacity: 1;
+        
+        }
+
+        .bar01, .backed{
+            display: block;
+            cursor: pointer; 
+        }
+        .goTop {
+                display: none;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <a class="btn goTop"><i class="fas fa-arrow-up"></i></a>
+    <div class="title">
+        <nav class="menubar">
+            <ul>
+                <li class="animated about" data-ani="flash"><a href="home.html">HOME</a></li>
+                <li class="animated about" data-ani="flash"><a href="about.html">ABOUT</a></li>
+                <li class="animated menu" data-ani="flash"><a href="menu.html">MENU</a></li>
+                <li class="animated contact" data-ani="flash"><a href="conant.html">CONTACT</a></li>
+                <li class="bar01"><i class="fas fa-bars"></i></li>
+                <li class="bar relative">
+                    <ul class="absolute">
+                            <li class="backed" ><i class="fas fa-times"></i></li>
+                            <li><a href="home.html">HOME</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="menu.html">MENU</a></li>
+                            <li><a href="conant.html">CONTACT</a></li>
+                        </ul>
+
+            </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <div class="mainmenu">
+            MENU
+        </div>
+        <div class="menu_img">
+            <ul>
+                <li><a href="images/menu05.jpg" data-lightbox="top" data-title="火烤食"><img src="images/menu05.jpg" alt=""></a>
+                </li>
+                <li><a href="images/menu02.jpg" data-lightbox="top" data-title="火烤食"><img src="images/menu02.jpg" alt=""></a>
+                </li>
+                <li><a href="images/menu03.jpg" data-lightbox="top" data-title="酥炸食"><img src="images/menu03.jpg" alt=""></a>
+                </li>
+                <li><a href="images/menu04.jpg" data-lightbox="top" data-title="香煎食"><img src="images/menu04.jpg" alt=""></a>
+                </li>
+                <li><a href="images/menu01.jpg" data-lightbox="top" data-title="炒食"><img src="images/menu01.jpg" alt=""></a>
+                </li>
+                <li><a href="images/menu06.jpg" data-lightbox="top" data-title="酒水"><img src="images/menu06.jpg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mainmenu mainwater">
+        菜色介紹
+    </div>
+    <div class="waterfall">
+        <div class="item">
+            <a href="images/01.jpg" data-lightbox="ant" data-title="-食-
+            蝦姑排">
+                <img src="images/01.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/02.jpg" data-lightbox="ant" data-title="-食-
+            胭脂蝦">
+                <img src="images/02.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/32.jpg" data-lightbox="ant" data-title="-食-
+            紅喉哥">
+                <img src="images/32.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/04.jpg" data-lightbox="ant" data-title="-食-
+            墨魚香腸">
+                <img src="images/04.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/05.jpg" data-lightbox="ant" data-title="-食-
+            跨力可鴨餅！">
+                <img src="images/05.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/06.jpg" data-lightbox="ant" data-title="-食-
+            跨力大阪燒">
+                <img src="images/06.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/27.jpg" data-lightbox="ant" data-title="-食-
+            煎干貝">
+                <img src="images/27.jpg" alt=""></a>
+        </div>
+        <div class="item">
+            <a href="images/29.jpg" data-lightbox="ant" data-title="-食-
+            南瓜濃湯">
+                <img src="images/29.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/09.jpg" data-lightbox="ant" data-title="-食-
+            小鮑魚">
+                <img src="images/09.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/10.jpg" data-lightbox="ant" data-title="-食-
+            蛤嬷湯">
+                <img src="images/10.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/12.jpg" data-lightbox="ant" data-title="-食-
+            羊肉串">
+                <img src="images/12.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/21.jpg" data-lightbox="ant" data-title="-食-
+            炸軟絲">
+                <img src="images/21.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/03.jpg" data-lightbox="ant" data-title="-食-
+            鴨肉可樂餅">
+                <img src="images/03.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/36.jpg" data-lightbox="ant" data-title="-食-
+           清爽的涼拌過貓">
+                <img src="images/36.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/08.jpg" data-lightbox="ant" data-title="-食-
+            泡菜雞翅">
+                <img src="images/08.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/25.jpg" data-lightbox="ant" data-title="-食-
+            跨力生魚片">
+                <img src="images/25.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/20.jpg" data-lightbox="ant" data-title="食-
+            烤午仔魚">
+                <img src="images/20.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/15.jpg" data-lightbox="ant" data-title="-食-明太子山藥">
+                <img src="images/15.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/07.jpg" data-lightbox="ant" data-title="-食-
+            跨力玉子燒">
+                <img src="images/07.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/19.jpg" data-lightbox="ant" data-title="-食-
+            冷烏龍">
+                <img src="images/19.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/28.jpg" data-lightbox="ant" data-title="-食-
+            烤軟絲">
+                <img src="images/28.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/24.jpg" data-lightbox="ant" data-title="-食-
+            跨力炸蝦x蝦頭飯">
+                <img src="images/24.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/31.jpg" data-lightbox="ant" data-title="-食-
+            味增松阪豬">
+                <img src="images/31.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/38.jpg" data-lightbox="ant" data-title="-食-
+            紅目鰱哥">
+                <img src="images/38.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/37.jpg" data-lightbox="ant" data-title="-食-
+            嘎一下冷筍">
+                <img src="images/37.jpg" alt=""></a>
+
+        </div>
+        <div class="item">
+            <a href="images/40.jpg" data-lightbox="ant" data-title="-食-跨力炸豆腐">
+                <img src="images/40.jpg" alt=""></a>
+
+        </div>
+    </div>
+    <div class="footerbig relative">
+            <div class="footer animated infinite pulse slower absolute">
+            </div>
+            <div class="footer1 animated infinite pulse slower  delay-1s absolute">
+            </div>
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <script src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
+    <script>
+        $(".menubar li").mouseenter(function () {
+            var animate = $(this).attr("data-ani")
+            $(this).animateCss(animate);
+        });
+        lightbox.option({
+            "resizeDuration": 500,
+            "wrapAround": true,
+            "albumLabel": "第 %1 張 of 共 %2 張",
+        })
+        $('.menu_img li').tilt({
+            scale: 1.2
+        })
+        $('.item').tilt({
+            scale: 1.2
+        })
+        $(".bar01").click(function(){
+            $(".bar").addClass("active");
+        });
+        $(".backed").click(function(){
+            $(".bar").removeClass("active");
+        })
+        $(".bar01").click(function(){
+            $(".bar").addClass("active");
+        });
+        $(".backed").click(function(){
+            $(".bar").removeClass("active");
+        });
+        $(".goTop").click(function () {
+            //$(window).scrollTop(0);
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+        });
+    </script>
+</body>
+
+</html>
