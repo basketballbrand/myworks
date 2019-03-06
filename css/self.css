@@ -1,0 +1,122 @@
+.relactive{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.flexd{
+    position: fixed;
+}
+.flex{
+    display: flex;
+}
+.none{
+    display: none;
+}
+.transition{
+    transition: 0.5s;
+}
+.top{
+    width: 100%;
+}
+.top img{
+    width:100%;
+    object-fit: cover;
+}
+.top_big{
+    width: 100%;
+}
+.top_title{
+color: aliceblue;
+top: 45%;
+left: 8%;
+text-align: center;
+font-family: 'Shadows Into Light', cursive;
+/* background-color: black; */
+}
+.top_title h3{
+    font-size: 40px;
+}
+.top_title h2{
+    font-size: 110px;
+    font-weight: bolder;
+}
+.container{
+    width: 70vw;
+    margin: 0 auto;
+}
+.about_title, .skill_title, .works_title, .contact_title{
+    justify-content: center;
+    align-items: center;
+    padding: 51px 0  39px 0; 
+}
+.line{
+    width: 20%;
+    background-color: black;
+    height:1px;
+}
+.about_title p, .skill_title p, .works_title p, .contact_title p{
+    margin: 20px 40px;
+    font-size: 35px;
+}
+.about_big, .skill_big, .works_big, .contact_big{
+    height: 100vh;
+}
+.about{
+    justify-content: space-around;
+    align-items:center;
+    /* padding: 10px 10px; */
+    margin-top: 8%;
+}
+.about_img{
+    width: 33%;
+}
+.about_img img{
+    width: 100%;
+    object-fit: cover;
+}
+.aboot_text{
+    width: 29%;
+}
+.aboot_text p{
+    font-size: 22px;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+.aboot_text span{
+    font-size: 28px;
+    font-weight: bold;
+}
+nav{
+    width: 98%;
+    padding: 50px 0px;
+    text-align: right;
+}
+nav ul{
+    list-style-type: none;
+    /* align-content: center;  */
+    flex-direction: column-reverse;
+}
+nav li, .fa-times{
+    margin-bottom: 65px;
+    font-size: 28px;
+    /* color: aliceblue; */
+    /* background-color: rgb(220, 219, 219);
+    padding: 10px 20px; */
+}
+.ch{
+    transition: .5s;
+    cursor: pointer;
+}
+.fa-bars, .fa-times{
+    margin-right: 50px;
+    font-size: 50px;
+    cursor: pointer;
+    transition: .5s;
+}
+.arrow{
+    bottom: 10%;
+    right: 5%;
+    font-size: 50px;
+    cursor: pointer;
+}
