@@ -64,9 +64,9 @@ font-family: 'Shadows Into Light', cursive;
     margin: 20px 40px;
     font-size: 35px;
 }
-.about_big, .contact_big{
+/* .about_big, .contact_big, .skill_big{
     height: 100vh;
-}
+} */
 .about{
     justify-content: space-around;
     align-items:center;
@@ -198,7 +198,7 @@ nav li, .fa-times{
 }
 .skill_02 h2{
     left: 43%;
-    top: 32%;
+    top: 30%;
 }
 .skill_03{
     left: calc(51% - 224px);
