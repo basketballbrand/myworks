@@ -196,27 +196,19 @@ var skill = $(".ch ul li").eq(2)
 var about = $(".ch ul li").eq(3)
 
 $(about).on('click',function(){
-    $('html,body').animate({
-        scrollTop: 900
-    }, 700);
+    $("html,body").animate({ scrollTop: $(".about_big").offset().top }, 500);
 });
 
 $(skill).on('click',function(){
-    $('html,body').animate({
-        scrollTop: 1800
-    }, 700);
+    $("html,body").animate({ scrollTop: $(".skill_big").offset().top }, 500);
 });
 
 $(works).on('click',function(){
-    $('html,body').animate({
-        scrollTop: 2700
-    }, 700);
+    $("html,body").animate({ scrollTop: $(".works_big").offset().top }, 500);
 });
 
 $(contact).on('click',function(){
-    $('html,body').animate({
-        scrollTop: 3900
-    }, 700);
+    $("html,body").animate({ scrollTop: $(".contact_big").offset().top }, 500);
 });
 
 $(".coffee").hover(function(){
