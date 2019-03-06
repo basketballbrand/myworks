@@ -16,15 +16,20 @@
 .transition{
     transition: 0.5s;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 .top{
     width: 100%;
+    height: 100vh;
+    background:url("../images/self/a.JPG") center  80%  no-repeat;
+    background-attachment: fixed;
+    /* opacity: 0.8; */
 }
 .top img{
     width:100%;
     object-fit: cover;
-}
-.top_big{
-    width: 100%;
 }
 .top_title{
 color: aliceblue;
@@ -32,7 +37,6 @@ top: 45%;
 left: 8%;
 text-align: center;
 font-family: 'Shadows Into Light', cursive;
-/* background-color: black; */
 }
 .top_title h3{
     font-size: 40px;
@@ -44,6 +48,7 @@ font-family: 'Shadows Into Light', cursive;
 .container{
     width: 70vw;
     margin: 0 auto;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 .about_title, .skill_title, .works_title, .contact_title{
     justify-content: center;
@@ -59,7 +64,7 @@ font-family: 'Shadows Into Light', cursive;
     margin: 20px 40px;
     font-size: 35px;
 }
-.about_big, .skill_big, .works_big, .contact_big{
+.about_big, .contact_big{
     height: 100vh;
 }
 .about{
@@ -91,22 +96,21 @@ nav{
     width: 98%;
     padding: 50px 0px;
     text-align: right;
+    z-index: 99;
 }
 nav ul{
     list-style-type: none;
-    /* align-content: center;  */
     flex-direction: column-reverse;
 }
 nav li, .fa-times{
     margin-bottom: 65px;
     font-size: 28px;
-    /* color: aliceblue; */
-    /* background-color: rgb(220, 219, 219);
-    padding: 10px 20px; */
+    font-weight: bold;
 }
 .ch{
     transition: .5s;
     cursor: pointer;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 .fa-bars, .fa-times{
     margin-right: 50px;
@@ -119,4 +123,115 @@ nav li, .fa-times{
     right: 5%;
     font-size: 50px;
     cursor: pointer;
+}
+.work{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.coffee{
+    width: 40%;
+    margin: 20px;
+    text-align: center;
+}
+.coffee img{ 
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    margin-bottom: 21px;
+}
+.work_say{
+    color: rgb(0, 0, 0);
+    top: 25%;
+    left: 25%;
+    font-size: 20px;
+}
+.coffee:hover  img{
+    opacity: 0.3;
+}
+.pos{
+    left: 15%;
+}
+.pos01{
+    left: 35%;
+}
+.contant_img{
+    width: 30%;
+    margin: 0 auto;
+}
+.contant_img img{
+    width: 100%;
+    object-fit: cover;
+}
+.contant ul{
+    list-style-type: none;
+}
+.contant li{
+    font-size: 22px;
+    line-height: 50px;
+
+}
+.contant{
+    text-align: center;
+}
+.skill{
+    width: 100%;
+    height: 80vh;
+}
+.skill_img{
+    width:30%;
+}
+.skill_img img{
+    width:100%;
+    object-fit: cover;
+}
+.skill_01{
+    left: calc(50% - 220px);
+    top: 18%;
+}
+.skill_01 h2{
+    left: 18%;
+    top: 22%;
+}
+.skill_02{
+    left: calc(64% - 220px);
+    top: 26%;
+}
+.skill_02 h2{
+    left: 43%;
+    top: 32%;
+}
+.skill_03{
+    left: calc(51% - 224px);
+    top: 33%;
+}
+.skill_03 h2{ 
+    left: 29%;
+    top: 36%;
+}
+.Skill_01_in ul, .Skill_02_in ul, .Skill_03_in ul{
+    list-style-type: none;
+}
+.Skill_01_in{
+    font-size: 22px;
+    top: -46%;
+    left: -46%;
+    line-height: 38px;
+}
+.Skill_02_in{
+    font-size: 22px;
+    top: -5%;
+    left: 84%;
+    line-height: 38px;
+}
+.Skill_03_in{
+    font-size: 22px;
+    top: 73%;
+    left: 20%;
+    line-height: 38px;
+}
+.skill_01:hover{
+    transform: scale(1.1,1.1);
+}
+.opacity{
+    opacity: 0.5;
 }
