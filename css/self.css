@@ -23,7 +23,7 @@ a{
 .top{
     width: 100%;
     height: 100vh;
-    background:url("../images/self/a.JPG") center  80%  no-repeat;
+    background:url("../images/self/sea.JPG") center  80%  no-repeat;
     background-attachment: fixed;
     /* opacity: 0.8; */
 }
@@ -33,17 +33,22 @@ a{
 }
 .top_title{
 color: aliceblue;
-top: 45%;
-left: 8%;
+top: 30%;
+left: 29%;
 text-align: center;
-font-family: 'Shadows Into Light', cursive;
+font-family: 'Permanent Marker', cursive;
 }
 .top_title h3{
     font-size: 40px;
+    margin: 0
 }
 .top_title h2{
     font-size: 110px;
     font-weight: bolder;
+    margin: 20px;
+}
+.top_title p{
+    font-size: 30px;
 }
 .container{
     width: 70vw;
@@ -71,7 +76,7 @@ font-family: 'Shadows Into Light', cursive;
     justify-content: space-around;
     align-items:center;
     /* padding: 10px 10px; */
-    margin-bottom: 10%;
+    margin-top: 8%;
 }
 .about_img{
     width: 33%;
@@ -84,7 +89,7 @@ font-family: 'Shadows Into Light', cursive;
     width: 29%;
 }
 .aboot_text p{
-    font-size: 22px;
+    font-size: 20px;
     line-height: 50px;
     letter-spacing: 2px;
 }
@@ -93,38 +98,44 @@ font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
 }
 nav{
-    width: 13%;
+    width: 16%;
     padding: 50px 0px;
     text-align: right;
     z-index: 99;
-    right: 5%;
+    right: 4%;
 }
 nav ul{
     list-style-type: none;
     flex-direction: column-reverse;
-
 }
 nav li, .fa-times{
     margin-bottom: 65px;
     font-size: 28px;
     font-weight: bold;
 }
+.back{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(164, 164, 164, 0.776);
+    z-index: 10;
+}
 .ch{
     transition: .5s;
     cursor: pointer;
     font-family: 'Noto Sans TC', sans-serif;
 }
-.fa-bars, .fa-times{
-    /* margin-right: 50px; */
-    font-size: 50px;
+.fa-bars{
+    font-size: 30px;
     cursor: pointer;
     transition: .5s;
+    color: #ccc;
 }
 .arrow{
-    bottom: 10%;
-    right: 5%;
-    font-size: 50px;
+    bottom: 2%;
+    right: 3%;
+    font-size: 40px;
     cursor: pointer;
+    z-index:99 ;
 }
 .work{
     flex-wrap: wrap;
@@ -166,6 +177,7 @@ nav li, .fa-times{
 }
 .contant ul{
     list-style-type: none;
+    padding: 0;
 }
 .contant li{
     font-size: 22px;
@@ -236,4 +248,109 @@ nav li, .fa-times{
 }
 .opacity{
     opacity: 0.5;
+}
+@media screen and (max-width:415px) {
+    .top_title {
+    top: 18%;
+    left: 0%;
+    }
+    .top_title h3 {
+        font-size: 35px;
+    }
+    .top_title h2 {
+        font-size: 96px;
+    }
+    .top_title p {
+        font-size: 21px;
+    }
+    nav{
+        right: 88%;
+        top:-3%;
+    }
+    .about_title p, .skill_title p, .works_title p, .contact_title p {
+        margin: 20px 18px;
+        font-size: 18px;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about_img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .aboot_text {
+        width: 100%;
+    }
+    .aboot_text p{
+        font-size: 16px;
+        line-height: 34px;
+    }
+    .skill_img {
+        width: 50%;
+    }
+    .skill_02 {
+        left: calc(105% - 174px);
+        top: 32%;
+    }
+    .skill_02 h2 {
+        font-size: 16px;
+        left: 35%;
+        top: 30%;
+    }
+    .Skill_02_in {
+        font-size: 16px;
+        top: -13%;
+        left: 62%;
+        line-height: 26px;
+    }
+    .skill_01 {
+        left: calc(82% - 177px);
+        top: 28%;
+    }
+    .skill_01 h2 {
+        font-size: 16px;
+        left: -11%;
+        top: 17%;
+    }
+    .Skill_01_in {
+        font-size: 16px;
+        top: -114%;
+        left: -66%;
+        line-height: 22px;
+    }
+    .skill_03 {
+        left: calc(101% - 224px);
+        top: 36%;
+    }
+    .skill_03 h2 {
+        left: 0%;
+        top: 43%;
+        font-size: 15px;
+    }
+    .Skill_03_in {
+        font-size: 16px;
+        top: 62%;
+        left: -17%;
+        line-height: 22px;
+    }
+    .skill {
+        height: 76vh;
+    }
+    .coffee{
+        width: 100%;
+    }
+    .contant_img {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .contant li {
+        font-size: 17px;
+        line-height: 40px;
+    }
+    .coffee:hover .p{
+        display: none;
+    }
+    .arrow{
+        font-size: 35px;
+    }
 }

@@ -9,6 +9,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <title>Alan's portfolio</title>
 </head>
 <body>  
@@ -16,7 +17,7 @@
         <div class="bars"><i class="fas fa-bars"></i></div>
         <div class="ch none">
             <ul class="flex">
-                <li>CONTACT</li>
+                <li>CONTACT ME</li>
                 <li>WORKS</li>
                 <li>SKILL</li>
                 <li>ABOUT</li>
@@ -26,12 +27,17 @@
             </ul>
         </div>
     </nav>
+    <div class="back flexd none">
+    </div>
     <div class="top">
     </div>
-    <!-- <div class="top_title absolute">
-        <h3>Hey,I'm</h3>
-        <h2>- ALAN TSAI -</h2>
-    </div> -->
+    <div class="top_title absolute">
+        <h3>Hi,I'm</h3>
+        <h2>ALAN TSAI</h2>
+        <P>Read, study and about everything<br>
+            imporant in your life.
+        </P>
+    </div>
     <div class="arrow flexd"><i class="fas fa-arrow-circle-up"></i></div>
     
     
@@ -147,7 +153,7 @@
 
     <div class="contact_big">
             <div class="contact_title flex">
-                    <div class="line"></div><p>CONTANT</p><div class="line"></div>
+                    <div class="line"></div><p>CONTANT ME</p><div class="line"></div>
             </div>
             <div class="contant">
                 <div class="contant_img" data-aos="fade-up">
@@ -169,15 +175,22 @@
 $(".bars").on('click',function(){
     $(this).addClass("none");
     $(".ch").removeClass("none");
-    $(".top").addClass("opacity");
+    $(".back").removeClass("none");
     $(".times").on('click',function(){
         $(".ch").addClass("none");
         $(".bars").removeClass("none");
-        $(".top").removeClass("opacity");
+        $(".back").addClass("none");
     })
 });
+$(".back").on('click',function(){
+    $(".ch").addClass("none");
+    $(".bars").removeClass("none");
+    $(".back").addClass("none");
+})
 $(".arrow").on('click',function(){
-    $(".top").removeClass("opacity");
+    $(".ch").addClass("none");
+        $(".bars").removeClass("none");
+        $(".back").addClass("none");
     $('html,body').animate({
         scrollTop: 0
     }, 700);
@@ -198,18 +211,30 @@ var about = $(".ch ul li").eq(3)
 
 $(about).on('click',function(){
     $("html,body").animate({ scrollTop: $(".about_big").offset().top }, 500);
+    $(".ch").addClass("none");
+        $(".bars").removeClass("none");
+        $(".back").addClass("none");
 });
 
 $(skill).on('click',function(){
     $("html,body").animate({ scrollTop: $(".skill_big").offset().top }, 500);
+    $(".ch").addClass("none");
+        $(".bars").removeClass("none");
+        $(".back").addClass("none");
 });
 
 $(works).on('click',function(){
     $("html,body").animate({ scrollTop: $(".works_big").offset().top }, 500);
+    $(".ch").addClass("none");
+        $(".bars").removeClass("none");
+        $(".back").addClass("none");
 });
 
 $(contact).on('click',function(){
     $("html,body").animate({ scrollTop: $(".contact_big").offset().top }, 500);
+    $(".ch").addClass("none");
+        $(".bars").removeClass("none");
+        $(".back").addClass("none");
 });
 
 $(".coffee").hover(function(){
@@ -219,7 +244,7 @@ $(".coffee").hover(function(){
 
 $(function(){
    AOS.init({
-      offset: 150,
+      offset: 200,
       easing: 'ease-in-sine',
   });
 })
