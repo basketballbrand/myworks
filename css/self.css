@@ -93,14 +93,16 @@ font-family: 'Shadows Into Light', cursive;
     font-weight: bold;
 }
 nav{
-    width: 98%;
+    width: 13%;
     padding: 50px 0px;
     text-align: right;
     z-index: 99;
+    right: 5%;
 }
 nav ul{
     list-style-type: none;
     flex-direction: column-reverse;
+
 }
 nav li, .fa-times{
     margin-bottom: 65px;
@@ -113,7 +115,7 @@ nav li, .fa-times{
     font-family: 'Noto Sans TC', sans-serif;
 }
 .fa-bars, .fa-times{
-    margin-right: 50px;
+    /* margin-right: 50px; */
     font-size: 50px;
     cursor: pointer;
     transition: .5s;
