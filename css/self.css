@@ -25,18 +25,16 @@ a{
     height: 100vh;
     background:url("../images/self/sea.JPG") center  80%  no-repeat;
     background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
     /* opacity: 0.8; */
-}
-.top img{
-    width:100%;
-    object-fit: cover;
 }
 .top_title{
 color: aliceblue;
-top: 30%;
-left: 28%;
 text-align: center;
 font-family: 'Permanent Marker', cursive;
+
+
 }
 .top_title h3{
     font-size: 40px;
@@ -249,7 +247,7 @@ nav li, .fa-times{
 .opacity{
     opacity: 0.5;
 }
-@media screen and (max-width:415px) {
+@media screen and (max-width:500px) {
     .top_title {
     top: 18%;
     left: 0%;
