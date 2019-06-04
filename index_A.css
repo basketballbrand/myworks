@@ -13,7 +13,7 @@ ul{
 }
 #container{
     width: 100%;
-    height: 91vh;
+    height: 96vh;
     background: url("./images/bg-home.jpg")0 0 no-repeat;
     background-position: 50% 20%;
 }
@@ -89,7 +89,7 @@ nav ul li a{
 .secound{
     /* border: 1px solid #000; */
     position: absolute;
-    bottom:73px;
+    bottom:30px;
     z-index: 0;
 }
 .secound ul{
