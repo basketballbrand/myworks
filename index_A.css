@@ -1,0 +1,241 @@
+body{
+    font-family: 'Play', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.flex{
+    display: flex;
+}
+ul{
+    list-style: none;
+}
+#container{
+    width: 100%;
+    height: 96vh;
+    background: url("./images/bg-home.jpg")0 0 no-repeat;
+    background-position: 50% 20%;
+}
+nav{
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.605);
+    /* align-items: center; */
+}
+.nav_top{
+    width: 70%;
+    margin: 0 auto;
+}
+nav ul {
+    width: 100%;
+    justify-content: space-around;
+}
+nav ul li {
+    /* background-color: rgba(0, 0, 0, 0.605); */
+    line-height: 62px;
+    transition: 0.5s;
+}
+nav ul li a{
+    color: lightpink;
+    font-size: 22px;
+}
+.container{
+    width: 65%;
+    margin: 0 auto;
+    /* border: 1px solid #000; */
+}
+.con_big{
+    margin-top: 30px;
+    position: relative;
+}
+.con_right{
+    position: absolute;
+    text-align: center;
+    color: aliceblue;
+    line-height: 35px;
+    margin-top: 21vh;
+    right: 10px;
+}
+.con_right h2{
+    font-size: 58px;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+.con_right h3{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.con_right a{
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.605);
+    color: aliceblue;
+    transition: 0.5s;
+    display: block;
+    width: 31%;
+    margin: 0 auto;
+}
+.con_left img{
+    position: absolute;
+    z-index: 1;
+    transition: 0.5s;
+    animation-name:oxxo;
+    animation-duration:100s;
+    animation-iteration-count: infinite;
+    /* animation-delay:0.5s; */
+    animation-timing-function: ease-in-out;
+}
+.secound{
+    /* border: 1px solid #000; */
+    position: absolute;
+    bottom:30px;
+    z-index: 0;
+}
+.secound ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.secound p{
+text-align: center;
+background-color: rgba(0, 0, 0, 0.605);
+padding: 20px 0 ;
+margin: 0;
+width: 100%;
+color: aliceblue;
+font-size: 30px;
+}
+.secound li{
+    transition: 0.5s;
+}
+#secound{
+    background-color: #630031;
+    width: 100%;
+    height: 168px;
+}
+.sec_container{
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    color: aliceblue;
+}
+.sec_container h2{
+    padding: 30px;
+    font-size: 30px;
+}
+.sec_container h3{
+    font-size: 20px;
+    line-height: 25px;
+}
+#third{
+background-color: black;
+width: 100%;
+}
+.third_container{
+    width: 65%;
+    margin: 0 auto;
+    color: aliceblue;
+    /* justify-content: space-between; */
+    padding: 10px 0 60px 0;
+}
+.third_container h2{
+    font-size: 36px;
+    padding: 40px 0;
+}
+
+.third_left{
+    padding: 0 20px 0 0;
+}
+.third_left img{
+    transition: 0.5s;
+}
+.third_right{
+    width: 100%;
+  
+}
+.third_right .one{
+  padding: 0 0 80px 0;
+}
+.third_right .two{
+    border-top: 1px solid #ccc;
+    padding: 40px 0 0 0 ;
+}
+.third_right .one img, .third_right .two img{
+    float: left;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+.third_right .one h3,.third_right .two h3{
+    font-size: 30px;
+}
+.third_right_read{
+    margin-top: 30px;
+    float: right;
+    background-color: #3c0f38;
+    padding: 10px;
+    transition: 0.5s;
+}
+.third_right .two{
+    clear: both;
+}
+.contant{
+    background-color:#a3a3a3;
+}
+.contant_container{
+    width: 65%;
+    margin: 0 auto;
+    font-size: 32px;
+    padding: 30px;
+    text-align: center;
+}
+.footer{
+    width: 65%;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 30px;
+    text-align: center;
+}
+nav li:hover{
+    transform: scale(1.1);
+}
+nav li:hover a{
+    color: aliceblue;
+}
+.con_right a:hover{
+    background-color: #630031;
+    transform: translateY(-10px);
+}
+.con_left img:hover  {
+  transform:rotate(10deg);
+}
+@keyframes oxxo{
+   0%{
+        transform:rotate(0deg);
+    }
+    25%{
+        transform:rotate(30deg);
+    }
+    50%{
+        transform:rotate(-20deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
+.secound li:hover{
+    opacity: 0.7;
+}
+.third_left a:hover img{
+    transform: scale(0.9);
+}
+.one a:hover img{
+    transform: scale(0.9);
+}
+.two a:hover img{
+    transform: scale(0.9);
+}
+.third_right_read:hover{
+    background-color: #726d70;
+    transform: translateY(-6px);
+}
